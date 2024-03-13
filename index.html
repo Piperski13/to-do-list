@@ -6,15 +6,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>Todo List Practice 1</p>
-  <div class="todo-input-grid">
-    <input class="js-name-input name-input" placeholder="Todo name">
-    <input class="js-due-date-input due-date-input" type="date">
-    <button class="add-todo-button" onclick="
-    addTodo();
-    ">Add</button>
+  <div class="centered">
+    <div>
+      <p class="header">Todo List Practice 1</p>
+      <div class="todo-input-grid">
+        <input class="js-name-input name-input" placeholder="Todo name">
+        <input class="js-due-date-input due-date-input" type="date">
+        <button class="add-todo-button" onclick="
+        addTodo();
+        ">Add</button>
+      </div>
+      <div class="js-todo-list todo-grid"></div>
+    </div>
   </div>
-  <div class="js-todo-list todo-grid"></div>
 
 </body>
 <script src="index.js"></script>
