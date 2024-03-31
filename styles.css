@@ -1,11 +1,16 @@
-body{
-    font-family: Arial;
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #f6eee3;
+    color: #695b4e;
 }
 .centered{
     display: flex;
     justify-content: center;
     align-items: baseline;
     height: 100vh;
+    
 }
 .header{
     text-align: center;
@@ -26,18 +31,19 @@ body{
 .due-date-input {
     font-size: 15px;
     padding: 6px;
+    border: 10px solid #d9bda5;
 }
 
 .add-todo-button{
-    background-color: green;
-    color: white;
+    background-color: #d9bda5;
+    color: #695b4e;
     border: none;
     font-size: 15px;
     cursor: pointer;
 }
 .delete-todo-button{
-    background-color: darkred;
-    color: white;
+    background-color: #d9bda5;
+    color: #695b4e;
     border: none;
     font-size: 15px;
     cursor: pointer;
