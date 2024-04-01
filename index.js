@@ -16,6 +16,7 @@ function renderTodoList(){
 
 let todoListHTML = ''; 
 
+
 todoList.forEach((todoObject,index) => {
   // const name = todoObject.name;
   // const dueDate = todoObject.dueDate;
@@ -24,14 +25,23 @@ todoList.forEach((todoObject,index) => {
   const html = `
   <div>${name}</div> 
   <div>${dueDate}</div>
-  <button onclick="
-  todoList.splice(${index},1);
-  renderTodoList();
-  " class="delete-todo-button">Delete</button>  
+  <button class="delete-todo-button js-delete-todo-button">Delete</button>  
   `;
   todoListHTML += html;
 });
 document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+
+// here (bellow) forEach loops trough 'array' of delte buttons, stores its value to delteButton 
+// and its index in index, and then gives each delete button a eventlistener where it deletes 
+// button based on which index is being pressed
+
+document.querySelectorAll('.js-delete-todo-button')
+  .forEach((delteButton,index)=>{
+    delteButton.addEventListener('click',()=>{
+      todoList.splice(index,1);
+      renderTodoList();
+    })
+})
 
 localStorage.setItem('todoList',JSON.stringify(todoList)); // seting object to a string
   
@@ -60,6 +70,11 @@ localStorage.setItem('todoList',JSON.stringify(todoList)); // seting object to a
 // localStorage.setItem('todoList',JSON.stringify(todoList)); // seting object to a string
 // }
 
+
+const addTodoElement = document.querySelector('.js-add-todo');
+addTodoElement.addEventListener('click',()=>{
+  addTodo();
+})
 
 function addTodo(){
   const inputElement = document.querySelector('.js-name-input');
