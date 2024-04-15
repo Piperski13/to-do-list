@@ -30,7 +30,7 @@ todoList.forEach((todoObject,index) => {
     </label>
   </div> 
   <div>
-    <label for="item_${index}" class="item_${index}">
+    <label for="date_${index}" class="date_${index}">
     ${dueDate}
     </label>
   </div>
@@ -57,6 +57,22 @@ document.querySelectorAll('.done')
   .forEach((checkbox,index)=>{
     checkbox.addEventListener('click',()=>{
       let checkID = document.querySelector(`.item_${index}`);
+
+      if(checkID.classList.contains('crossed')){
+        checkID.classList.remove('crossed');
+        
+      }
+      else{
+      checkID.classList.add('crossed');
+      }
+    })
+});
+
+// added checkbox feature, when checked cross date , when unchecked uncross date
+document.querySelectorAll('.done')
+  .forEach((checkbox,index)=>{
+    checkbox.addEventListener('click',()=>{
+      let checkID = document.querySelector(`.date_${index}`);
 
       if(checkID.classList.contains('crossed')){
         checkID.classList.remove('crossed');
