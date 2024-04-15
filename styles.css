@@ -49,3 +49,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.crossed{
+    text-decoration: line-through;
+}

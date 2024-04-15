@@ -21,9 +21,9 @@ todoList.forEach((todoObject,index) => {
   // const name = todoObject.name;
   // const dueDate = todoObject.dueDate;
   const {name,dueDate} = todoObject; // Destructor, same as the comented code above
-
+  
   const html = `
-  <div>${name}</div> 
+  <div><input type="checkbox" id="item_${index}" class="done"><label for="item_${index}" class="item_${index}">${name}</label></div> 
   <div>${dueDate}</div>
   <button class="delete-todo-button js-delete-todo-button">Delete</button>  
   `;
@@ -41,7 +41,24 @@ document.querySelectorAll('.js-delete-todo-button')
       todoList.splice(index,1);
       renderTodoList();
     })
-})
+});
+
+// added checkbox feature, when checked cross name , when unchecked uncross name
+document.querySelectorAll('.done')
+  .forEach((checkbox,index)=>{
+    checkbox.addEventListener('click',()=>{
+      let checkID = document.querySelector(`.item_${index}`);
+
+      if(checkID.classList.contains('crossed')){
+        checkID.classList.remove('crossed');
+        
+      }
+      else{
+      checkID.classList.add('crossed');
+      }
+    })
+});
+
 
 localStorage.setItem('todoList',JSON.stringify(todoList)); // seting object to a string
   
