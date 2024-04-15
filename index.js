@@ -23,8 +23,17 @@ todoList.forEach((todoObject,index) => {
   const {name,dueDate} = todoObject; // Destructor, same as the comented code above
   
   const html = `
-  <div><input type="checkbox" id="item_${index}" class="done"><label for="item_${index}" class="item_${index}">${name}</label></div> 
-  <div>${dueDate}</div>
+  <div>
+    <input type="checkbox" id="item_${index}" class="done">
+    <label for="item_${index}" class="item_${index}">
+    ${name}
+    </label>
+  </div> 
+  <div>
+    <label for="item_${index}" class="item_${index}">
+    ${dueDate}
+    </label>
+  </div>
   <button class="delete-todo-button js-delete-todo-button">Delete</button>  
   `;
   todoListHTML += html;
