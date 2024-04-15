@@ -5,12 +5,11 @@
     background-color: #f6eee3;
     color: #695b4e;
 }
-.centered{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    height: 100vh;
-    
+
+.grid-layout{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
 }
 .header{
     text-align: center;
