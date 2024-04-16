@@ -11,8 +11,13 @@
     grid-template-columns: repeat(3,1fr);
     column-gap: 20px;
 }
-.header{
+.header-paragraph{
     text-align: center;
+}
+.header-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .todo-grid,
 .todo-input-grid {
@@ -40,6 +45,10 @@
     font-size: 15px;
     cursor: pointer;
 }
+.header-button{
+    margin-right: 25px;
+}
+.header-button,
 .delete-todo-button{
     background-color: #d9bda5;
     color: #695b4e;
@@ -51,4 +60,7 @@
 }
 .crossed{
     text-decoration: line-through;
+}
+.center-date{
+    text-align: center;
 }

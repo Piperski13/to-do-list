@@ -29,7 +29,7 @@ todoList.forEach((todoObject,index) => {
     ${name}
     </label>
   </div> 
-  <div>
+  <div class="center-date">
     <label for="date_${index}" class="date_${index}">
     ${dueDate}
     </label>
