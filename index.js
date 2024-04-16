@@ -15,7 +15,7 @@ renderTodoList();
 function renderTodoList(){ 
 
 let todoListHTML = ''; 
-
+console.log('Add button rendered')
 
 todoList.forEach((todoObject,index) => {
   // const name = todoObject.name;
@@ -88,11 +88,14 @@ document.querySelectorAll('.done')
 localStorage.setItem('todoList',JSON.stringify(todoList)); // seting object to a string
   
 };
+eventaddTodo();   // function that adds event listener to addBtn and calls addTodo()
+function eventaddTodo(){
+  const addTodoElement = document.querySelector('.js-add-todo');
+  addTodoElement.addEventListener('click',()=>{
+    addTodo();
+  });
+}
 
-const addTodoElement = document.querySelector('.js-add-todo');
-addTodoElement.addEventListener('click',()=>{
-  addTodo();
-})
 
 //gets name and date values and stores it localy and prints it on screen;
 function addTodo(){

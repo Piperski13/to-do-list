@@ -11,6 +11,7 @@
     grid-template-columns: repeat(3,1fr);
     column-gap: 20px;
 }
+
 .header-paragraph{
     text-align: center;
 }
