@@ -15,11 +15,7 @@
 .header-paragraph{
     text-align: center;
 }
-.header-flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 .todo-grid,
 .todo-input-grid {
     display: grid;
@@ -49,7 +45,7 @@
 .header-button{
     margin-right: 25px;
 }
-.header-button,
+
 .delete-todo-button{
     background-color: #d9bda5;
     color: #695b4e;
